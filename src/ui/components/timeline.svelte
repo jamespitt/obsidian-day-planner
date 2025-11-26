@@ -86,7 +86,7 @@
       }
     },
     onpanend: confirmEdit,
-    options: { mouseSupport: false },
+    options: { mouseSupport: true },
   });
 </script>
 

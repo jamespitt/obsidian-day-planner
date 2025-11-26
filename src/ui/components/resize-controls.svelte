@@ -34,6 +34,7 @@
               task,
               fromTop ? EditMode.RESIZE_FROM_TOP : EditMode.RESIZE,
             ),
+          options: { mouseSupport: true },
         }),
       ]}
     >
@@ -54,6 +55,7 @@
                 : EditMode.RESIZE_AND_SHIFT_OTHERS,
             );
           },
+          options: { mouseSupport: true },
         }),
       ]}
     >
@@ -72,6 +74,7 @@
                 : EditMode.RESIZE_AND_SHRINK_OTHERS,
             );
           },
+          options: { mouseSupport: true },
         }),
       ]}
     >

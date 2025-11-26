@@ -74,7 +74,7 @@
       onlongpress: (event) => {
         setSecondary(event);
       },
-      options: { mouseSupport: false },
+      options: { mouseSupport: true },
     }),
     pointerUpOutside(clear),
   ];

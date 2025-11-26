@@ -34,6 +34,7 @@
       use={[
         createGestures({
           onpanmove: () => handleGripMouseDown(task, EditMode.DRAG),
+          options: { mouseSupport: true },
         }),
       ]}
     >
@@ -47,6 +48,7 @@
       use={[
         createGestures({
           onpanmove: () => handleGripMouseDown(t.copy(task), EditMode.DRAG),
+          options: { mouseSupport: true },
         }),
       ]}
     >

@@ -4,6 +4,7 @@ import { dedent } from "ts-dedent";
 import {
   strictTimestampAnywhereInLineRegExp,
   looseTimestampAtStartOfLineRegExp,
+  durationRegexp,
 } from "../regexp";
 import type { LocalTask } from "../task-types";
 import {
@@ -72,6 +73,19 @@ export function getTimeFromLine({ line, day }: { line: string; day: Moment }) {
         startTime,
         endTime.clone().add(1, "day"),
       );
+    }
+  }
+
+  const durationMatch = durationRegexp.exec(line);
+
+  if (durationMatch) {
+    const [, value, unit] = durationMatch;
+    const valueAsNumber = parseInt(value, 10);
+
+    if (unit.toLowerCase() === "h") {
+      durationMinutes = valueAsNumber * 60;
+    } else {
+      durationMinutes = valueAsNumber;
     }
   }
 

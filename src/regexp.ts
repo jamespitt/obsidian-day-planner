@@ -51,6 +51,7 @@ export const scheduledPropRegExps = [
 ];
 
 export const propRegexp = /\[([^\]]+)::([^\]]+)\]/g;
+export const durationRegexp = /\[duration::?\s*(\d+)\s*(m|h)\]/i;
 
 export const dashOrNumberWithMultipleSpaces = /(-|\d+[.)])\s+/g;
 export const escapedSquareBracket = /\\\[/g;

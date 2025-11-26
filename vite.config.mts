@@ -59,7 +59,7 @@ export default defineConfig((env) => ({
       formats: ["cjs" as const],
     },
     minify: env.mode === "production",
-    outDir: ".",
+    outDir: "out",
     rollupOptions: {
       output: {
         exports: "named" as const,
